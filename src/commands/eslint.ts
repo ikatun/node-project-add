@@ -19,6 +19,10 @@ const devDeps = [
   'husky',
 ];
 
+const neededDependency = (projectContainsReact: boolean) => (dependency: string) => {
+  return projectContainsReact || !dependency.includes('react');
+};
+
 export default class Eslint extends Command {
   static description = 'Add a proper eslint+prettier configuration for your typescript project';
 
@@ -40,13 +44,27 @@ eslint config added
       throw new Error('Missing package.json, command should be run in node project root directory');
     }
 
-    const missingDeps = devDeps.filter(devDep => !containsDependency(cwd, devDep));
+    const projectContainsReact = containsDependency(cwd, 'react');
+
+    const missingDeps = devDeps
+      .filter(devDep => !containsDependency(cwd, devDep))
+      .filter(neededDependency(projectContainsReact));
+
     packageManager.installDev(cwd, missingDeps);
 
     copyTemplateFiles(cwd, 'eslint', '*');
+    if (!projectContainsReact) {
+      copyTemplateFiles(cwd, 'eslint-without-react', '*');
+    }
+
     packageJson.addScript(cwd, 'lint', "eslint '*/**/*.{js,ts,tsx}'");
 
-    packageJson.addKey(cwd, 'husky.hooks.pre-commit', 'tsc --noEmit && lint-staged');
+    packageJson.addKey(
+      cwd,
+      'husky.hooks.pre-commit',
+      'tsc --noEmit --incremental false --tsBuildInfoFile null && lint-staged',
+    );
+
     packageJson.addKey(cwd, ['lint-staged', '*.{js,ts,tsx}'], ['eslint --fix']);
   }
 }
