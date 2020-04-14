@@ -3,28 +3,22 @@ node-project-add
 
 Add eslint, prettier, husky or typescript support to your existing NodeJS or React project.
 
-You can use it alongside npm to create a typescript project with prettier, eslint and husky git hook working together
-
-Usage example:
+## Add typescript support
+Add typescript support for your project
 ```shell script
-mkdir example-node-app
-cd example-node-app
-npm init -y
 npx node-project-add typescript
-npm start
 ```
 
-Congratulations, you now have a running typescript node project!
-Directory `build` contains the transpiled javascript build, `src` directory contains the source.
-File `src/index.ts` is the entry file of your app.
-
-You can also run the command in an existing javascript project to enable typescript support.
-
-To add linter support to a typescript project, run `node-project-add eslint` command.
-Usage example:
+## Add eslint+prettier+husky+lint-staged support
 ```shell script
 npx node-project-add eslint
 ```
+
+Congratulations, you now have a typescript node project with full linter and autofix fully configured!
+Directory `build` contains the transpiled javascript build, `src` directory contains the source.
+File `src/index.ts` is the entry file of your app.
+
+# CLI DOCS
 
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
 [![Version](https://img.shields.io/npm/v/node-project-add.svg)](https://npmjs.org/package/node-project-add)
