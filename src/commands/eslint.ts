@@ -15,6 +15,8 @@ const devDeps = [
   'eslint-plugin-react',
   'eslint-plugin-simple-import-sort',
   'prettier',
+  'lint-staged',
+  'husky',
 ];
 
 export default class Eslint extends Command {
@@ -42,6 +44,9 @@ eslint config added
     packageManager.installDev(cwd, missingDeps);
 
     copyTemplateFiles(cwd, 'eslint', '*');
-    packageJson.addScript(cwd, 'lint', "tsc --noEmit && eslint '*/**/*.{js,ts,tsx}' --fix");
+    packageJson.addScript(cwd, 'lint', "eslint '*/**/*.{js,ts,tsx}'");
+
+    packageJson.addKey(cwd, 'husky.hooks.pre-commit', 'tsc --noEmit && lint-staged');
+    packageJson.addKey(cwd, ['lint-staged', '*.{js,ts,tsx}'], ['eslint --fix']);
   }
 }
