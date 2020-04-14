@@ -12,6 +12,7 @@
     "@oclif/config": "^1.14.0",
     "@oclif/plugin-help": "^2.2.3",
     "@types/lodash": "^4.14.149",
+    "glob": "^7.1.6",
     "lodash": "^4.17.15",
     "tslib": "^1.11.1"
   },
