@@ -42,7 +42,7 @@ $ npm install -g node-project-add
 $ node-project-add COMMAND
 running command...
 $ node-project-add (-v|--version|version)
-node-project-add/0.0.1 darwin-x64 node-v12.13.1
+node-project-add/0.0.2 darwin-x64 node-v12.13.1
 $ node-project-add --help [COMMAND]
 USAGE
   $ node-project-add COMMAND
@@ -68,7 +68,7 @@ EXAMPLE
   eslint config added
 ```
 
-_See code: [src/commands/eslint.ts](https://github.com/ikatun/node-project-add/blob/v0.0.1/src/commands/eslint.ts)_
+_See code: [src/commands/eslint.ts](https://github.com/ikatun/node-project-add/blob/v0.0.2/src/commands/eslint.ts)_
 
 ## `node-project-add help [COMMAND]`
 
@@ -99,5 +99,5 @@ EXAMPLE
   $ node-project-add typescript
 ```
 
-_See code: [src/commands/typescript.ts](https://github.com/ikatun/node-project-add/blob/v0.0.1/src/commands/typescript.ts)_
+_See code: [src/commands/typescript.ts](https://github.com/ikatun/node-project-add/blob/v0.0.2/src/commands/typescript.ts)_
 <!-- commandsstop -->
