@@ -1,12 +1,12 @@
 {
-  "name": "node-add",
+  "name": "nodeadd",
   "description": "Add eslint, prettier, husky or typescript support to your existing NodeJS or React project.",
   "version": "0.0.1",
   "author": "Ivo Katunaric @ikatun",
   "bin": {
-    "node-add": "./bin/run"
+    "nodeadd": "./bin/run"
   },
-  "bugs": "https://github.com/ikatun/node-add/issues",
+  "bugs": "https://github.com/ikatun/nodeadd/issues",
   "dependencies": {
     "@oclif/command": "^1.5.19",
     "@oclif/config": "^1.14.0",
@@ -38,7 +38,7 @@
     "/npm-shrinkwrap.json",
     "/oclif.manifest.json"
   ],
-  "homepage": "https://github.com/ikatun/node-add",
+  "homepage": "https://github.com/ikatun/nodeadd",
   "keywords": [
     "oclif"
   ],
@@ -46,12 +46,12 @@
   "main": "lib/index.js",
   "oclif": {
     "commands": "./lib/commands",
-    "bin": "node-add",
+    "bin": "nodeadd",
     "plugins": [
       "@oclif/plugin-help"
     ]
   },
-  "repository": "ikatun/node-add",
+  "repository": "ikatun/nodeadd",
   "scripts": {
     "postpack": "rm -f oclif.manifest.json",
     "posttest": "eslint . --ext .ts --config .eslintrc.js",
