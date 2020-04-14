@@ -26,5 +26,7 @@ module.exports = {
     "@typescript-eslint/no-explicit-any": "off",
     "react/prop-types": "off",
     "@typescript-eslint/camelcase": "off",
+    "simple-import-sort/sort": "error",
+    "react/display-name": "off"
   }
 };

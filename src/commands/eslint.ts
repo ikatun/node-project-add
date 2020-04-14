@@ -1,8 +1,10 @@
 import { Command } from '@oclif/command';
-import { packageJsonExists } from '../services/package-json-exists';
-import * as npm from '../services/npm';
+
+import { containsDependency } from '../services/contains-dependency';
 import { copyTemplateFiles } from '../services/copy-template-files';
 import * as packageJson from '../services/package-json';
+import { packageJsonExists } from '../services/package-json-exists';
+import * as packageManager from '../services/package-manager';
 
 const devDeps = [
   '@typescript-eslint/eslint-plugin',
@@ -35,7 +37,10 @@ eslint config added
     if (!packageJsonExists(cwd)) {
       throw new Error('Missing package.json, command should be run in node project root directory');
     }
-    npm.installDev(cwd, devDeps);
+
+    const missingDeps = devDeps.filter(devDep => !containsDependency(cwd, devDep));
+    packageManager.installDev(cwd, missingDeps);
+
     copyTemplateFiles(cwd, 'eslint', '*');
     packageJson.addScript(cwd, 'lint', "tsc --noEmit && eslint '*/**/*.{js,ts,tsx}' --fix");
   }
