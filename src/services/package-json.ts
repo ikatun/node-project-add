@@ -8,5 +8,5 @@ export function addScript(cwd: string, key: string, value: string) {
   scripts[key] = value;
   packageJson.scripts = scripts;
 
-  fs.writeFileSync(filePath, JSON.stringify(packageJson, null, 2), { encoding: 'utf8' });
+  fs.writeFileSync(filePath, JSON.stringify(packageJson, null, 2) + '\n', { encoding: 'utf8' });
 }
