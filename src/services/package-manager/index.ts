@@ -9,3 +9,11 @@ export function installDev(cwd: string, depsList: string[]) {
 
   return npm.installDev(cwd, depsList);
 }
+
+export function install(cwd: string, depsList: string[]) {
+  if (hasYarnLock(cwd)) {
+    return yarn.install(cwd, depsList);
+  }
+
+  return npm.install(cwd, depsList);
+}
