@@ -3,14 +3,22 @@ node-project-add
 
 Add eslint, prettier, husky or typescript support to your existing NodeJS or React project.
 
-## Add typescript support
-Add typescript support for your project
+## Add typescript support to your project
 ```shell script
 npx node-project-add typescript
 ```
 
 ## Add eslint+prettier+husky+lint-staged support
 ```shell script
+npx node-project-add eslint
+```
+
+## Example: Creating a typescript node project from scratch:
+```shell script
+mkdir test-app-typescript
+cd test-app-typescript
+npm init -y
+npx node-project-add typescript
 npx node-project-add eslint
 ```
 
