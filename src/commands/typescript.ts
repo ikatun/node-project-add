@@ -13,7 +13,7 @@ export default class Typescript extends Command {
   static description = 'Add a typescript configuration for a node project';
 
   static examples = [
-    `$ nodeadd typescript
+    `$ node-project-add typescript
   `,
   ];
 

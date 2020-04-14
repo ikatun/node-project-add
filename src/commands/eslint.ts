@@ -27,7 +27,7 @@ export default class Eslint extends Command {
   static description = 'Add a proper eslint+prettier configuration for your typescript project';
 
   static examples = [
-    `$ nodeadd eslint
+    `$ node-project-add eslint
 eslint config added
 `,
   ];
