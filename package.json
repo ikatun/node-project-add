@@ -1,7 +1,7 @@
 {
   "name": "node-project-add",
   "description": "Add eslint, prettier, husky or typescript support to your existing NodeJS or React project.",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "Ivo Katunaric @ikatun",
   "bin": {
     "node-project-add": "./bin/run"
