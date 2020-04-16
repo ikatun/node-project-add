@@ -34,6 +34,7 @@ File `src/index.ts` is the entry file of your app.
 [![License](https://img.shields.io/npm/l/node-project-add.svg)](https://github.com/ikatun/node-project-add/blob/master/package.json)
 
 <!-- toc -->
+* [CLI DOCS](#cli-docs)
 * [Usage](#usage)
 * [Commands](#commands)
 <!-- tocstop -->

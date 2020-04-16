@@ -59,7 +59,8 @@
     "prepack": "rm -rf lib && tsc -b && oclif-dev manifest && oclif-dev readme",
     "test": "echo NO TESTS",
     "lint": "tsc --noEmit && eslint --config .eslintrc.js --no-eslintrc '*/**/*.{js,ts,tsx}' --fix",
-    "version": "oclif-dev readme && git add README.md"
+    "version": "oclif-dev readme && git add README.md",
+    "add-resources": "cp -r src/templates lib/templates"
   },
   "types": "lib/index.d.ts"
 }
