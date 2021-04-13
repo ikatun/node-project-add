@@ -6,8 +6,8 @@ import * as packageJson from '../services/package-json';
 import { packageJsonExists } from '../services/package-json-exists';
 import * as packageManager from '../services/package-manager';
 
-const devDeps = ['typescript', '@types/node', 'tsc-watch', 'reflect-metadata'];
-const deps = ['source-map-support'];
+const devDeps = ['typescript', '@types/node', 'tsc-watch'];
+const deps = ['source-map-support', 'reflect-metadata'];
 
 export default class Typescript extends Command {
   static description = 'Add a typescript configuration for a node project';

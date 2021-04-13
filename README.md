@@ -45,7 +45,7 @@ $ npm install -g node-project-add
 $ node-project-add COMMAND
 running command...
 $ node-project-add (-v|--version|version)
-node-project-add/0.0.3 darwin-x64 node-v12.13.1
+node-project-add/0.0.3 darwin-x64 node-v12.16.1
 $ node-project-add --help [COMMAND]
 USAGE
   $ node-project-add COMMAND
